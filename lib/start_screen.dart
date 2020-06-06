@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 import 'constants.dart';
+import 'reusable_card.dart';
 
+enum Modes {
+  ltr,
+  rtl,
+  random,
+  control 
+}
 
 class StartScreen extends StatefulWidget {
   @override
@@ -8,6 +15,10 @@ class StartScreen extends StatefulWidget {
 }
 
 class _StartScreenState extends State<StartScreen> {
+  
+  Modes selectedMode;
+  var active = false;
+  
   @override
   Widget build(BuildContext context) {
     var screensize = MediaQuery.of(context).size;
@@ -22,7 +33,27 @@ class _StartScreenState extends State<StartScreen> {
             end: Alignment.topCenter,
             colors: kColorGradient,
           ),
-        )
+        ),
+        child: SafeArea(
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                  'Select Play Mode',
+                  style: kHeaderText,
+                ),
+                Container(
+                  padding: EdgeInsets.all(12.5),
+                  decoration: BoxDecoration(
+                    color: Color(0xFFe3e5e9)
+                  ),
+                ),
+              ],
+            ),
+          )
+        ),
       )
     );
   }

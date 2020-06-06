@@ -12,3 +12,6 @@ TextStyle kHeaderText = GoogleFonts.roboto(
     fontSize: 40.0
   )
 );
+
+Color kActiveCardColor = Color(0xFFd4d7de);
+Color kInactiveCardColor = Color(0xFFf1f2f4);
