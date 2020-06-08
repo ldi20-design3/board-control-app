@@ -3,6 +3,7 @@ import 'constants.dart';
 import 'reusable_card.dart';
 import 'icon_content.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_blue/flutter_blue.dart';
 
 enum Modes {
   ltr,
