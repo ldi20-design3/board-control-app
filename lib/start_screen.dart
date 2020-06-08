@@ -12,6 +12,8 @@ enum Modes {
   control 
 }
 
+FlutterBlue fblue = FlutterBlue.instance;
+
 class StartScreen extends StatefulWidget {
   @override
   _StartScreenState createState() => _StartScreenState();
